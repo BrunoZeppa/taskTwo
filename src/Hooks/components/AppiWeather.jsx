@@ -20,7 +20,7 @@ const AppiWeather = () => {
         changeBackground(icon);
     }, [temperature, icon]);
 
-    const handleTemperature = () => {
+    const changeTempLecture = () => {
         let value = 0;
         if (temp[1] === " °C") {
             value = temp[0] + 32;
@@ -69,7 +69,7 @@ const AppiWeather = () => {
             <div className='weather-card'>
                 <header>
                     <h1>Weather App</h1>
-                    <h2>{city},{country}</h2>
+                    <h2>{city}, {country}</h2>
                 </header>
                 <main>
                     <div>
@@ -78,13 +78,13 @@ const AppiWeather = () => {
                     </div>
                     <div>
                         <h4>{weatherDescription}</h4>
-                        <h3>Wind speed:<span>{windSpeed}</span></h3>
+                        <h3>Wind speed:<span> {windSpeed}</span></h3>
                         <h3>Clouds: <span>{clouds}</span></h3>
                         <h3>Pressure: <span>{pressure}</span></h3></div>
                 </main>
                 <aside>
                     <div>
-                        <button onClick={handleTemperature}>Degrees °F/°C</button>
+                        <button onClick={changeTempLecture}>Degrees °F/°C</button>
                     </div>
                 </aside>
             </div>
@@ -94,12 +94,3 @@ const AppiWeather = () => {
 };
 
 export default AppiWeather;
-/*
-city: data.name,
-                  country: data.sys.country,
-                  temperature: (data.main.temp - 273.15),
-                  description: data.weather[0].description,
-                  wind: data.wind.speed,
-                  clouds: data.clouds.all,
-                  pressure: data.main.pressure,
-                  icon: data.weather[0].icon*/
