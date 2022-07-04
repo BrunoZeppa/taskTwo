@@ -38,13 +38,13 @@ const AppiWeather = () => {
             if (icon === 1) {
                 setBackground('https://images.unsplash.com/photo-1533324268742-60b233802eef?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80');
                 setIcon("fas fa-sun")
-            } else if ((icon >= 2 && icon <= 4) || icon === 50) {
+            } else if ((icon >= 2 && icon <= 4)) {
                 setBackground('https://images.unsplash.com/photo-1534088568595-a066f410bcda?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=751&q=80');
                 if (icon === 2) {
                     setIcon("fas fa-cloud-sun")
                 } else if (icon === 3) {
                     setIcon("fas fa-cloud");
-                } else if (icon === 4 || icon === 50) {
+                } else if (icon === 4) {
                     setIcon("fas fa-cloud");
                 }
             } else if (icon >= 9 && icon <= 11) {
